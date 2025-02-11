@@ -1,5 +1,4 @@
 import CarCard from "./components/carCard/CarCard";
-import Button from "./elements/Button";
 
 const App: React.FC = () => {
   return (
