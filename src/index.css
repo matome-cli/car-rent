@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 button {
-  @apply rounded bg-blue-500 active:bg-blue-800 hover:to-blue-400 text-white;
+  @apply rounded bg-blue-600 active:bg-blue-800 hover:bg-blue-400 text-white;
 }

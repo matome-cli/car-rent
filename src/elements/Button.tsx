@@ -1,16 +1,14 @@
-import { ReactNode } from "react";
-
 type ButtonProps = {
-  svg?: ReactNode;
+  svg?: string;
   textContent?: string;
 };
 
 const Button: React.FC<ButtonProps> = ({ svg, textContent }) => {
   // icon button only
-  if (!textContent) {
+  if (!textContent && svg) {
     return (
-      <button className="w-button-sm h-button-sm p-2 flex justify-center items-center">
-        {svg}
+      <button className="w-10 h-10 px-3 ">
+        <img src={svg} />
       </button>
     );
   }
@@ -18,16 +16,16 @@ const Button: React.FC<ButtonProps> = ({ svg, textContent }) => {
   // icon with text
   if (textContent && svg) {
     return (
-      <button className="w-button-md h-button-md flex justify-between items-center px-1">
+      <button className="w-button-lg h-button-md flex justify-center items-center gap-2">
         {textContent}
-        {svg}
+        <img src={svg} />
       </button>
     );
   }
 
   // normal button
   return (
-    <button className="w-button-md h-button-md lg:w-button-lg lg:h-button-lg px-4 py-[5px]">
+    <button className="w-button-lg h-button-md text-center">
       {textContent}
     </button>
   );
