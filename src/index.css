@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  @apply rounded bg-blue-500 active:bg-blue-800 hover:to-blue-400;
+}
