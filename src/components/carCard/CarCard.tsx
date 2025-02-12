@@ -1,25 +1,36 @@
 import Body from "./Body";
 import Footer from "./Footer";
 import Header from "./Header";
-// this needs to take props so that i can pass them down for other components
 
-type CardCardProps = {
+type CarCardProps = {
   vehicleCode: string;
   vehicleType: "SUV" | "Sedan" | "Hatchback";
   vehicleSVG: string;
+  fuelTankCapacity: number;
+  transmission: "Manual" | "Automatic";
+  seatNumber: number;
+  costPerDay: number;
 };
 
-const CarCard: React.FC<CardCardProps> = ({ vehicleCode, vehicleType }) => {
+const CarCard: React.FC<CarCardProps> = ({
+  vehicleCode,
+  vehicleType,
+  vehicleSVG,
+  fuelTankCapacity,
+  transmission,
+  seatNumber,
+  costPerDay,
+}) => {
   return (
-    <div className="w-60 h-48 rounded-lg flex flex-col justify-between items-start">
+    <div className="w-60 h-48 lg:w-60 lg:h-60 rounded-lg flex flex-col justify-between items-start">
       <Header code={vehicleCode} type={vehicleType} />
       <Body
-        seats={6}
-        transmission="Manual"
-        fuelTankCapacity={80}
-        vehicleSVG="./cars/beigesuv.svg"
+        seats={seatNumber}
+        transmission={transmission}
+        fuelTankCapacity={fuelTankCapacity}
+        vehicleSVG={vehicleSVG}
       />
-      <Footer costPerDay={80}/>
+      <Footer costPerDay={costPerDay} />
     </div>
   );
 };

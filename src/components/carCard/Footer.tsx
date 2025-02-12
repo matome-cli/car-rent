@@ -8,8 +8,6 @@ type FooterProps = {
 const Footer: React.FC<FooterProps> = ({ costPerDay }) => {
   const money: string = formatCurrency(costPerDay, "af-ZA");
 
-  console.log(money)
-
   return (
     <div className="w-full flex justify-between items-center">
       <h3>

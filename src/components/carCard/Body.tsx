@@ -28,7 +28,7 @@ const Body: React.FC<BodyProps> = ({
 
         <div className="car-card-icon-p-group">
           <img src="./carCard/people.svg" />
-          <p className="text-gray-400">{seats} seats</p>
+          <p className="text-gray-400">{seats} people</p>
         </div>
       </div>
     </div>
