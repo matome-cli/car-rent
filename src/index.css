@@ -5,3 +5,11 @@
 button {
   @apply rounded bg-blue-600 active:bg-blue-800 hover:bg-blue-400 text-white;
 }
+
+.car-card-icon-p-group {
+  @apply flex justify-center items-center gap-1;
+
+  p {
+    @apply text-sm lg:text-base;
+  }
+}
