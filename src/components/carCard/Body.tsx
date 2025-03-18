@@ -12,7 +12,7 @@ const Body: React.FC<BodyProps> = ({
   transmission,
 }) => {
   return (
-    <div className="w-full flex-grow flex justify-between items-center">
+    <div className="w-full flex justify-between items-center">
       <img src={vehicleSVG} />
 
       <div className="flex flex-col justify-center items-start gap-1">

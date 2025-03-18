@@ -22,7 +22,7 @@ const CarCard: React.FC<CarCardProps> = ({
   costPerDay,
 }) => {
   return (
-    <div className="w-60 h-48 lg:w-60 lg:h-60 rounded-lg flex flex-col justify-between items-start">
+    <div className="w-72 h-48 lg:h-72 rounded-lg flex flex-col justify-between items-start">
       <Header code={vehicleCode} type={vehicleType} />
       <Body
         seats={seatNumber}
